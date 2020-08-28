@@ -3,7 +3,6 @@ import 'firebase/storage';
 import 'firebase/firestore';
 
 
-// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAT9kbygZME7mtXi_kXCE0EdwHjbzd-a6w",
     authDomain: "paula-picgram.firebaseapp.com",
@@ -16,9 +15,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-//Initialize storage servis upload time to sort images
+//Initialize storage servis 
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
-const timestamp = firebase.firestore.FieldValue.serverTimestamp; //Special type of data: timestamp used by firebase.
+const timestamp = firebase.firestore.FieldValue.serverTimestamp; //Special type of data: timestamp - used by firebase.
 
 export { projectStorage, projectFirestore, timestamp };

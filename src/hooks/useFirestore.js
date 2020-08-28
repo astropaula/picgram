@@ -6,10 +6,9 @@ const useFirestore = (collection) => {
 
     // Communicate with database
     useEffect(() => {
-        // Returns a function
         const unsub = projectFirestore.collection(collection)
             .orderBy('createdAt', 'desc').onSnapshot((snap) => {
-                // Retrieving documents
+
                 let documents = [];
                 snap.forEach(doc => {
                     documents.push({ ...doc.data(), id: doc.id })
@@ -17,7 +16,7 @@ const useFirestore = (collection) => {
                 setDocs(documents);
             })
 
-        // Cleanup function - get rid of the collection.
+        // Cleanup function 
         return () => unsub();
     }, [collection])
 

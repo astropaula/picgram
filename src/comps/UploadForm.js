@@ -8,18 +8,15 @@ const UploadForm = () => {
 
     const types = ['image/png', 'image/jpeg'];
 
-    // Function which handle the event
     const changeHandler = (e) => {
         // Grab first selected file
         let selected = e.target.files[0];
-        console.log(selected); //Check action
+        // console.log(selected); 
 
-        // Check the presence and type of the file
         if (selected && types.includes(selected.type)) {
             setFile(selected);
             setError('');
         } else {
-            // Reset
             setFile(null);
             setError('Please select an image file (png or jpeg)');
 

@@ -109,10 +109,9 @@ label:hover{
 }
 
 .img-wrap {
-  overflow: hidden; /* image does not appear beyond that */
+  overflow: hidden; /* image does not appear beyond wrap */
   height: 0;
-  /* Make squares */
-  padding: 50% 0; /* Padding controls height  - perfect square no matter what is the width of the page*/
+  padding: 50% 0; /* Padding controls height - makes perfect square no matter what is the width of the page */
   position: relative;
   opacity:0.8;
 }

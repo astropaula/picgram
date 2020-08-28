@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { projectStorage, projectFirestore, timestamp } from '../firebase/config';
 
-// Keep firebase logic outside the components (UploadForm)
+// Keeping firebase logic outside the components (UploadForm)
 
 const useStorage = (file) => {
     const [progress, setProgress] = useState(0);
@@ -9,8 +9,8 @@ const useStorage = (file) => {
     const [url, setUrl] = useState(null);
 
     useEffect(() => {
-        // reference to the file inside default firebase storage - when file will be uploaded it should have that name
-        //where file should be saved
+        // Reference to the file inside default firebase storage
+        // Reference to database with id and timestamp
         const storageRef = projectStorage.ref(file.name);
         const collectionRef = projectFirestore.collection('images');
 
@@ -29,7 +29,7 @@ const useStorage = (file) => {
             setUrl(url);
         });
 
-    }, [file]); //useEffect is on when changes in file happens
+    }, [file]);
 
     return { progress, url, error }
 }
