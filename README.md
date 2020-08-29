@@ -1,4 +1,5 @@
 # Picgram
+Photo journal with online storage, created with React
 
 ## Table of content
 * General info
