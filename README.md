@@ -2,12 +2,8 @@
 Photo journal with online storage, created with React
 
 ## Table of content
-* General info
 * Technologies
 * Usage
-
-# General info
-Web app created with React, made for storing photos online
 
 # Technologies
 * React.js
