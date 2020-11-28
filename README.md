@@ -19,7 +19,7 @@ Photo journal with online storage, created with React.
 # Usage
 * Upload photo from you computer using add button
 * Enjoy online journal
-* https://astropaula.github.io/picgram
+* https://paulawojciechowska.github.io/picgram
 
 # Description
 This project was made mainly to practise `react` library,
